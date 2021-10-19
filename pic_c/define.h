@@ -7,7 +7,7 @@ struct particle
 	double vx;
 	double vy;
 	double vz;
-	double ener;										//单位eV
+	double ener;										//单位eV111
 	double weig;
 };
 
@@ -64,7 +64,7 @@ static double const U0 = 0.0;								//-3.0*Te;
 static double const vb_D = sqrt((Te + Ti)*qi / m_D);			//氘的离子声速
 static double const vb_C = sqrt((Te + Tc)*qi / m_C);			//C离子的离子声速
 
-static const double dt = 1.0e-12;						//时间步长
+static const double dt = 1.0e-12;						//时间步长11
 static const double freq_D = qe * B0 / m_D;				//氘离子回旋角频率
 static const double radi_D = sqrt(3.0*m_D*Ti / qe);		//氘离子回旋半径
 static const double deby_leng = sqrt(-eps0 * Te*Ti / ((Te + Ti)*Ne*qe));
