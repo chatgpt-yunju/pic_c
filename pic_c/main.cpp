@@ -45,9 +45,16 @@ int main()
 	clock_t star, fini;
 	int hour, minu;
 	star = clock();
-    //printf("%d \n",numb_edc[0]);
-    //printf("%d \n",numb_edc[1]);
-    //printf("%d \n",numb_edc[2]);
+	/* 初始化 */
+	//static const int numb_e = 1.0e6;								//模拟电子的超粒子数
+	//static const int numb_D = 1.0e6;								//模拟D的超粒子数
+	//static const int numb_C3 = 0;									//模拟杂质粒子的超粒子数
+	numb_edc[0] = numb_e;
+	numb_edc[1] = numb_D;
+	numb_edc[2] = numb_C3;
+    printf("%d \n",numb_edc[0]);
+    printf("%d \n",numb_edc[1]);
+    printf("%d \n",numb_edc[2]);
 
 
 
