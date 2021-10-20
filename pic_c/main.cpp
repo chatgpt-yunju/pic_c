@@ -45,10 +45,56 @@ int main()
 	clock_t star, fini;
 	int hour, minu;
 	star = clock();
+
+	/**************** 初始化 *********************************************/
+	//static const int numb_e = 1.0e6;								//模拟电子的超粒子数
+	//static const int numb_D = 1.0e6;								//模拟D的超粒子数
+	//static const int numb_C3 = 0;									//模拟杂质粒子的超粒子数
+	numb_edc[0] = numb_e;
+	numb_edc[1] = numb_D;
+	numb_edc[2] = numb_C3;
     //printf("%d \n",numb_edc[0]);
     //printf("%d \n",numb_edc[1]);
     //printf("%d \n",numb_edc[2]);
+	
+	/******初始化每个网格点每个粒子的平均数密度、电荷密度、电势、场******/
+	for (i = 0; i < Nz_plas; i++)  //Nz_plas = 1001; z方向网格数
+	{
+		for (j = 0; j < 3; j++)
+			dens_aver[j][i] = 0.0; 
+		char_dens_aver[i] = 0.0;
+		pote_aver[i] = 0.0;
+		fiel_aver[i] = 0.0;
+	}
+	/**********初始化每种粒子的两个边界**********************************/
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 2; j++)
+		{
+			flux_aver[i][j] = 0.0;
+			ener_flux_aver[i][j] = 0.0;
+		}
+	}
 
+	/**********执行声明的读写文件操作*************************************/
+	fp_init = fopen("intial.dat", "w");
+	fp_aver = fopen("aver.dat", "w");
+	fp_flux_aver = fopen("flux_aver.dat", "w");
+	fp_ener_flux_aver = fopen("ener_flux_aver.dat", "w");
+	fp_dura = fopen("duration.dat", "w");
+	fp_who[0] = fopen("1ns.dat", "w");
+	fp_who[1] = fopen("2ns.dat", "w");
+	fp_who[2] = fopen("3ns.dat", "w");
+	fp_who[3] = fopen("5ns.dat", "w");
+	fp_who[4] = fopen("7ns.dat", "w");
+	fp_who[5] = fopen("10ns.dat", "w");
+	fp_who[6] = fopen("15ns.dat", "w");
+	fp_who[7] = fopen("25ns.dat", "w");
+	fp_who[8] = fopen("35ns.dat", "w");
+	fp_who[9] = fopen("45ns.dat", "w");
+	fp_who[10] = fopen("60ns.dat", "w");
+	fp_who[11] = fopen("80ns.dat", "w");
+	fp_who[12] = fopen("100ns.dat", "w");
 
 
 }
