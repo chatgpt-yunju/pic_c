@@ -75,6 +75,7 @@ static const double dens_targ = 19.35;
 static const double NA = 6.0221367e23;
 
 void diag(void);
+void stime(void);
 void init(particle *ptr_e, particle *ptr_D, particle *ptr_C3);																	//初始化
 void maxw(double *vx, double *vy, double *vz, double kt, double mass);																//Maxwell速度分布
 void pic(particle *ptr, int numb, double q, double *dens);																			//粒子云分室法
