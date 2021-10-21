@@ -47,6 +47,7 @@ int main()
 	star = clock();
 
 	/**************** 初始化 *********************************************/
+	/**************** 初始化粒子数 ***************************************/
 	//static const int numb_e = 1.0e6;								//模拟电子的超粒子数
 	//static const int numb_D = 1.0e6;								//模拟D的超粒子数
 	//static const int numb_C3 = 0;									//模拟杂质粒子的超粒子数
@@ -96,6 +97,10 @@ int main()
 	fp_who[11] = fopen("80ns.dat", "w");
 	fp_who[12] = fopen("100ns.dat", "w");
 
+	/**********诊断函数*************************************/
+	diag();
+	srand((unsigned int)time(0)); //根据当前时间初始化随机数种子
+	printf("time(0) %d \n", (unsigned int)time(0)); stime();
 
 }
 

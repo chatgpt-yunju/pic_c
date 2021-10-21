@@ -151,7 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="diag.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="stime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
