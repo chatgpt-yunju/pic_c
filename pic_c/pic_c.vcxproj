@@ -152,8 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="diag.cpp" />
+    <ClCompile Include="init.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stime.cpp" />
+    <ClCompile Include="maxw.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />

@@ -14,7 +14,7 @@ int main()
 {
     //std::cout << "Hello World!  \n";
     static particle part_e[NUMBMAX], part_D[NUMBMAX], part_C3[NUMBMAX];			//三种模拟粒子
-    int numb_edc[3];															//存放三种粒子的粒子数
+    int numb_edc[3]; 															//存放三种粒子的粒子数
 	double dens[3][Nz_plas];//Nz_plas = 1001; z方向网格数    					//存放三种粒子在各格点的密度
 	double char_dens[Nz_plas], pote[Nz_plas], fiel[Nz_plas];					//存放各格点的电荷密度、电势、电场
 	double flux[3][2], ener_flux[3][2], flux_aver[3][2], ener_flux_aver[3][2]; //3种粒子，2个边界  //统计入射到边界的粒子流及能流
@@ -100,7 +100,11 @@ int main()
 	/**********诊断函数*************************************/
 	diag();
 	srand((unsigned int)time(0)); //根据当前时间初始化随机数种子
-	printf("time(0) %d \n", (unsigned int)time(0)); stime();
+	//printf("time(0) %d \n", (unsigned int)time(0)); stime();
+	printf("Initial......\n");
+	
+	/**********init函数*************************************/
+	init(part_e, part_D, part_C3);// 调用初始化init函数
 
 }
 
