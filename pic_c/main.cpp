@@ -105,6 +105,9 @@ int main()
 	
 	/**********init函数*************************************/
 	init(part_e, part_D, part_C3);// 调用初始化init函数
+	
+    /* 划分网格 */
+	grid_pic(part_e, part_D, part_C3, numb_edc, dens, char_dens);//PIC，numb_edc[3];存放三种粒子的粒子数
 
 }
 

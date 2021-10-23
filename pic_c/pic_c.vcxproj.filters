@@ -35,5 +35,8 @@
     <ClCompile Include="maxw.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="pic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

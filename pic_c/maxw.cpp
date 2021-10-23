@@ -14,13 +14,13 @@ void maxw(double* vx, double* vy, double* vz, double kt, double mass)
 	//printf("电子热速度%f \n", vt); 
 
 	ran1 = rand() / (double)RAND_MAX;//产生0-1之间的随机数
-	v = vt * sqrt(-log(ran1));
-	//ran1 = rand() / (double)RAND_MAX;
-	//theta = 2.0 * pi * ran1;
-	//ran1 = rand() / (double)RAND_MAX;
-	//psi = 2.0 * pi * ran1;
+	v = vt * sqrt(-log(ran1));//?
+	ran1 = rand() / (double)RAND_MAX;
+	theta = 2.0 * pi * ran1;
+	ran1 = rand() / (double)RAND_MAX;
+	psi = 2.0 * pi * ran1;
 
-	//*vx = v * sin(theta);
-	//*vy = v * cos(theta);
-	//*vz = v * sin(psi);
+	*vx = v * sin(theta);
+	*vy = v * cos(theta);
+	*vz = v * sin(psi); //?
 }
